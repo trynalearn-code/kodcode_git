@@ -1,0 +1,63 @@
+# #1.
+# age=int(input("what is your age?"))
+# if age<0 or age>120:
+#     print("invalid")
+# elif 0<=age<=12:
+#     print ("you're a child")
+# elif 12<age<=17:
+#     print("you're a teenager")
+# else:
+#     print("you're an adult")
+
+# #2.
+# letter=input("gimme a letter")
+# if letter.lower() not in "qwertyuiopasdfghjklzxcvbnm" or letter !=1:
+#     print("invalid")
+# elif letter.lower() in "aeiou":
+#     print("Your letter is a vowel")
+# else:
+#     print("you've got a consonant")
+
+# #3.
+# age=int(input("How old are you?"))
+# VIP=input("Do you have a VIP card?")
+# if age<16:
+#      print("REJECTED")
+# elif 19<=age<=21 or VIP=="yes":
+#      print("you may enter! Enjoy your stay!")
+# else:
+#      print("Sorry, you cannot stay here")
+
+# #4.
+# passw="sillygoose"
+# password=input("what is the password?")
+# if len(password)<8:
+#     print("too short")
+# elif password==passw:
+#     print("Access Granted!")
+# else:
+#     print("wrong password")
+
+# #5. 
+# x=int(input("What is your x coordinate??"))
+# y=int(input("What is your y coordinate??"))
+# if x==10 or x==50 or y==20 or y==80:
+#     print("on the edge")
+# elif 10<x<50 or 20<y<80:
+#     print("in the rectangle")
+# else:
+#     print("outside the rectangle")
+
+# #6.
+# name=input("What your name?") or "Anonymous"
+# print(f"Hello", name)
+
+# #8. 
+# a=int(input("what is your first number?"))
+# b=int(input("what is your second number?"))
+# c=int(input("what is your third number?"))
+# print((a>0) + (b>0) + (c>0))
+
+#10.
+score=int(input("what is your score?"))
+print("A" if 90 <score<100 else "B" if 80 <=score<90 else "C" if 70 <=score<80 else "F")

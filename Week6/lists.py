@@ -64,7 +64,6 @@ def rotate(lst,num):
     lst2=[]
     lst2.extend(lst[num+1:])
     lst2.extend(lst[:num+1])
-    
     return lst2
 
 print(rotate([1, 2, 3, 4, 5],2))

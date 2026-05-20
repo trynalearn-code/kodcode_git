@@ -27,24 +27,22 @@ def find_soldier_by_id(soldier_id: int) -> dict | None:
 def find_duty_by_name(duties: list, duty_name: str) -> dict | None:
     """
     Searches for a duty by name in a duty list.
-    
     Type: Helper Function
-    
     Receives:
         duties (list): List of duties
         duty_name (str): Duty name to search for
-    
     Returns:
         dict | None: Duty dictionary if found, None if not found
-    
     Raises: Nothing - returns None if not found
-    
     Why this function exists:
     This function is used in multiple places (adding duties, updating status).
     Separates search logic into one place.
     Returns None instead of raising an exception - allows flexibility.
     """
-    pass
+    for duty in duties:
+        if duty["name"]==duty_name:
+            return duty
+    return None
 
 
 def is_valid_status(status: str) -> bool:

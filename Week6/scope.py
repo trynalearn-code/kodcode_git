@@ -59,14 +59,24 @@
 #     names.sort()
 #     return names
 
-#9.
-def add_item(item, bag=[]):
-    bag.append(item)
-    return bag
+# #9.
+# def add_item(item, bag=[]):
+#     bag.append(item)
+#     return bag
+# #the bag keeps the old list. try this:
+# def add_item(item, bag=None):
+#     if bag is None:
+#         bag=[]
+#     bag.append(item)
+#     return bag
 
-#the bag keeps the old list. try this:
-def add_item(item, bag=None):
-    if bag is None:
-        bag=[]
-    bag.append(item)
-    return bag
+#10.
+#in circle.py:
+# def area(r):
+#   return 3.14 *r*r
+#in rectangle.py:
+#def area(r):
+#   return w*h
+#from geometry import circle, from geometry import rectangle
+#print(circle.area(5))
+#print(rectangle.area(4,6))

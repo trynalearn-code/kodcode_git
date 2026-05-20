@@ -71,4 +71,4 @@ def get_all_soldiers() -> list:
     Controlled access to data.
     Allows retrieving data without directly accessing the global variable.
     """
-    pass
+    return dt.soldiers

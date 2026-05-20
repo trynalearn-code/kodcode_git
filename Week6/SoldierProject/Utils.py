@@ -2,28 +2,26 @@
 # utils.py
 # Responsibility: Reusable helper functions
 # ============================================================================
-
+import data as dt
 def find_soldier_by_id(soldier_id: int) -> dict | None:
     """
     Searches for a soldier by ID and returns it.
-    
     Type: Helper Function
-    
     Receives:
         soldier_id (int): Soldier's ID number
-    
     Returns:
         dict | None: Soldier dictionary if found, None if not found
-    
     Raises: Nothing - returns None if not found
-    
     Why this function exists:
     This function is used in many places in the system (DRY).
     Instead of repeating a search loop in every function,
     there is one function that does it.
     Returns None instead of raising an exception - allows flexibility.
     """
-    pass
+    for soldier in dt.soldiers:
+        if soldier["id"] == soldier_id:
+            return soldier
+    return None
 
 
 def find_duty_by_name(duties: list, duty_name: str) -> dict | None:

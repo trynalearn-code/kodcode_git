@@ -43,29 +43,34 @@ def add_duty_to_soldier(soldier_id: int, duty_name: str, day: str) -> None:
 
 def update_duty_status(soldier_id: int, duty_name: str, new_status: str) -> None:
     """
-    Updates the status of a duty.
-    
-    Type: Business Logic
-    
+    Updates the status of a duty. 
+    Type: Business Logic 
     Receives:
         soldier_id (int): Soldier's ID number
         duty_name (str): Duty name
         new_status (str): New status (pending/completed/missed)
-    
     Returns:
         None - the function updates the status or raises an exception
-    
     Raises:
         KeyError: If a soldier with this ID is not found in the system
         KeyError: If a duty with this name is not found for the soldier
         ValueError: If new_status is invalid (not pending/completed/missed)
-    
     Why this function exists:
     Business logic for updating status.
     Performs checks and updates the status.
     Raises exceptions in case of errors instead of returning False.
     """
-    pass
+    if new_status not in ["pending", "completed", "missed"]:
+        raise ValueError("new status is invalid")
+    for soldier in dt.soldiers:
+        if soldier["id"]==soldier_id:
+            for duty in soldier["duties"]:
+                if duty["name"]==duty_name:
+                    duty["status"]==new_status
+                    return
+            raise KeyError("Duty not found")
+    raise KeyError("Soldier not found")
+
 
 
 def get_soldier_duties(soldier_id: int) -> list:

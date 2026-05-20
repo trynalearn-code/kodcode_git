@@ -48,25 +48,22 @@ def find_duty_by_name(duties: list, duty_name: str) -> dict | None:
 def is_valid_status(status: str) -> bool:
     """
     Checks whether a status is valid.
-    
     Type: Validation Function
-    
     Receives:
         status (str): Status to validate
-    
     Returns:
         bool: True if the status is valid (pending/completed/missed)
               False if invalid
-    
     Raises: Nothing - always returns bool
-    
     Why this function exists:
     Status validation is used in multiple places.
     Instead of repeating the validation, there is one function.
     Also makes it easier to change valid statuses in the future.
     Validation functions return bool and do not raise exceptions.
     """
-    pass
+    if status in ["pending", "completed", "missed"]:
+        return True
+    return False
 
 
 def is_valid_name(name: str) -> bool:

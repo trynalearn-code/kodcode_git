@@ -111,22 +111,19 @@ def soldier_has_duty(soldier: dict, duty_name: str) -> bool:
 def is_valid_day(day: str) -> bool:
     """
     Checks whether a day is valid (not Friday or Saturday).
-    
     Type: Validation Function
-    
     Receives:
         day (str): Day to validate
-    
     Returns:
         bool: True if the day is valid (sunday-thursday)
               False if invalid or forbidden (friday/saturday or invalid value)
-    
     Raises: Nothing - always returns bool
-    
     Why this function exists:
     Day validation is used when adding duties.
     Separates validation logic into one place.
     In the future, valid days can be changed in one place.
     Validation functions return bool and do not raise exceptions.
     """
-    pass
+    if day.lower() in ["friday", "saturday"]:
+        return False
+    return True

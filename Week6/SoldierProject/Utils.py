@@ -89,25 +89,23 @@ def is_valid_name(name: str) -> bool:
 def soldier_has_duty(soldier: dict, duty_name: str) -> bool:
     """
     Checks whether a soldier has a duty with a certain name.
-    
     Type: Validation Function
-    
     Receives:
         soldier (dict): Soldier dictionary
         duty_name (str): Duty name to check
-    
     Returns:
         bool: True if the duty exists for the soldier
               False if it does not exist
-    
     Raises: Nothing - always returns bool
-    
     Why this function exists:
     This check is used when adding duties (to prevent duplicates).
     Separates the logic into one place.
     Validation functions return bool and do not raise exceptions.
     """
-    pass
+    for duty in soldier["duties"]:
+        if duty["name"]==duty_name:
+            return True
+    return False
 
 
 def is_valid_day(day: str) -> bool:

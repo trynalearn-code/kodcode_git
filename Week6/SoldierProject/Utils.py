@@ -69,25 +69,21 @@ def is_valid_status(status: str) -> bool:
 def is_valid_name(name: str) -> bool:
     """
     Checks whether a name is valid (not empty).
-    
     Type: Validation Function
-    
     Receives:
         name (str): Name to validate
-    
     Returns:
         bool: True if the name is valid (not empty)
               False if empty
-    
     Raises: Nothing - always returns bool
-    
     Why this function exists:
     Name validation is used in multiple places.
     Separates validation logic into one place.
     In the future, additional checks can be added (minimum length, valid characters).
     Validation functions return bool and do not raise exceptions.
     """
-    pass
+    if name in dt.soldiers[name]:
+        return bool(name and name.strip())
 
 
 def soldier_has_duty(soldier: dict, duty_name: str) -> bool:

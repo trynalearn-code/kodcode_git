@@ -65,7 +65,7 @@ def handle_view_soldiers() -> None:
 
 
 def handle_add_duty() -> None:
-      """
+    """
     Handles the process of adding a duty to a soldier.
     Receives user input and calls the appropriate functions.
     Receives: Nothing
@@ -81,9 +81,8 @@ def handle_add_duty() -> None:
         print("success!")
     except ValueError as e:
         print(f"Error: {e}")
-        except KeyError as e:
-    print(f"Error: {e}")
-
+    except KeyError as e:
+        print(f"Error: {e}")
 
 def handle_update_duty_status() -> None:
     """

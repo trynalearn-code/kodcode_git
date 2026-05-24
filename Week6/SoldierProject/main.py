@@ -1,9 +1,15 @@
+from soldier_manager import *
+from duty_manager import *
+from Utils import *
 def show_menu() -> None:
     """
 Displays menu to user    
 Keeps menu separate from logic
     """
-    pass
+    
+    print("Please choose what action you would like to take: \n 1.Add Soldier" \
+    "\n 2. Remove soldier \n 3. View Current Soldiers \n 4. Add Duty \n 5. Uptate Duty Status \n" \
+    "6. View Duties \n 7. Exit")
 
 
 def get_user_choice() -> str:
@@ -11,7 +17,7 @@ def get_user_choice() -> str:
 Takes user's choice
 Later can replace with GUI or website without changic logic
     """
-    pass
+    return int(input("What action would you like to take?"))
 
 
 def handle_add_soldier() -> None:
@@ -20,43 +26,60 @@ Handles adding a soldier
 Asks for ID, name, calls add_soldier(), catches exceptions, and prints whether it was successful or not    
    
     """
-    pass
-
-
+    try:
+        id=int(input("what is the soldier's ID?"))
+        name=input("what is the soldier's name?")
+        add_soldier(id,name)
+        print("soldier successfully added")
+    except ValueError as e:
+        print(f"Error: {e}")
 def handle_remove_soldier() -> None:
     """
 Deals with removing sodiers. 
 Takes user input, and calls the right function
     """
-    pass
+    try:
+        id=int(input("what is the soldier's ID?"))
+        remove_soldier(id)
+    except ValueError as e:
+        print(f"Error: {e}")
 
 
 def handle_view_soldiers() -> None:
     """
     Handles the process of displaying all soldiers.
     Calls the appropriate function and displays the result.
-    
     Receives: Nothing
     Returns: Nothing
-    
     Why this function exists:
     Separation between retrieving data and displaying it.
     """
-    pass
+
+    soldiers=get_all_soldiers()
+    if not soldiers:
+        print("There aren't any soldiers in the program")
+        return
+    for soldier in soldiers:
+        print(f"ID: {soldier["id"]}")
+        print(f"Name: {soldier["name"]}")
+        print(f"Duties: {len(soldier["duties"])}")
 
 
 def handle_add_duty() -> None:
       """
     Handles the process of adding a duty to a soldier.
     Receives user input and calls the appropriate functions.
-    
     Receives: Nothing
     Returns: Nothing
-    
     Why this function exists:
     Separation between UI and business logic.
     """
-    pass
+    try:
+        id=int(input("enter soldier ID")
+        d_name=(input("Enter duty name: "))
+        day=input("Enter day of duty")
+        
+               
 
 
 def handle_update_duty_status() -> None:

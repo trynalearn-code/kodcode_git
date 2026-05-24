@@ -82,8 +82,7 @@ def is_valid_name(name: str) -> bool:
     In the future, additional checks can be added (minimum length, valid characters).
     Validation functions return bool and do not raise exceptions.
     """
-    if name in dt.soldiers[name]:
-        return bool(name and name.strip())
+    return bool(name and name.strip())
 
 
 def soldier_has_duty(soldier: dict, duty_name: str) -> bool:

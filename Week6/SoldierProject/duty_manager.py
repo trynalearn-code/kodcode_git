@@ -62,7 +62,7 @@ def update_duty_status(soldier_id: int, duty_name: str, new_status: str) -> None
     """
     if new_status not in ["pending", "completed", "missed"]:
         raise ValueError("new status is invalid")
-    for soldier in dt.soldiers:
+    for soldier in dt.soldier:
         if soldier["id"]==soldier_id:
             for duty in soldier["duties"]:
                 if duty["name"]==duty_name:

@@ -81,8 +81,8 @@ def handle_add_duty() -> None:
         print("success!")
     except ValueError as e:
         print(f"Error: {e}")
-    except KeyError as e:
-        print(f"Error: {e}")
+        except KeyError as e:
+    print(f"Error: {e}")
 
 
 def handle_update_duty_status() -> None:

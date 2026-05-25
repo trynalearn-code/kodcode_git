@@ -14,15 +14,16 @@
 #         f.write("I've added a line to the diary using append!")
 # add_entry("diary.txt", 2/3/1234, "hello")
 
-#3.
-def search_diary(filename, keyword):
-    with open(filename,"r",encoding="utf-8") as f:
-        for line in f:
-            if keyword in line:
-                print(line)
+# #3.
+# def search_diary(filename, keyword):
+#     with open(filename,"r",encoding="utf-8") as f:
+#         for line in f:
+#             if keyword in line:
+#                 print(line)
 
-import os
-def safe_read_diary(filename):
-    if os.path.exists(filename):
-        return True
-    return False
+# import os
+# def safe_read_diary(filename):
+#     if os.path.exists(filename):
+#         return True
+#     return False
+

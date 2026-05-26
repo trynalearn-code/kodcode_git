@@ -1,0 +1,36 @@
+תרגיל 1 – נכון / לא נכון
+סמן V אם הטענה נכונה, X אם לא:
+.1 _F__ print ו-logging הם שקולים לחלוטין
+.2 _T__ DEBUG מתאים למידע מפורט בזמן פיתוח
+.3 _F__ מותר לכתוב סיסמה בלוג אם היא מוצפנת
+.4 __F_ WARNING אומר שהמערכת קרסה
+.5 _F__ FileHandler שומר לוגים לקובץ
+stack trace גם כולל logger.exception _F__ .6
+.7 _F__ כדאי להשתמש ברמת לוג אחת בלבד לפשטות
+תרגיל 2 – התאמת רמת לוג
+לכל תיאור, ציין את רמת הלוג המתאימה )ERROR / WARNING / INFO / DEBUG):
+.1 משתמש התחבר בהצלחה: _INFO__
+.2 קובץ קונפיגורציה לא נמצא: _ERROR__
+.3 כניסה לפונקציה עם ערכי הפרמטרים: _DEBUG__
+.4 מסד הנתונים לא זמין: _ERROR__
+.5 מלאי מוצר נמוך מ5- יחידות: _ERROR__
+.6 תהליך הזמנה הסתיים בהצלחה: _INFO_
+
+מצא את הבעיה בכל לוג ותקן:
+# לוג א
+logger.error('User logged in successfully')
+בעיה ותיקון: __should be logger.info('User logged in successfully')_____________________________________________
+# לוג ב
+logger.info('Login', email, password)
+בעיה ותיקון: _____NEVER log passwords! try logger.info("Login attempt for email%s", email)__________________________________________
+# לוג ג
+print('ERROR: payment failed')
+בעיה ותיקון: _______no explanation. and it's a print, doesn't save. should be logger.error('Payment failed')_______________________________________
+
+תרגיל 4 – מה מייצג כל שדה?
+הסבר מה מייצג כל שדה בפורמט הבא:
+'%(asctime)s | %(levelname)s | %(name)s | %(message)s'
+%(asctime)s: _____the time and date__________________________________________
+%(levelname)s: _______how severe (error,info etc)________________________________________
+%(name)s: _______________name of log________________________________
+%(message)s: _______________the message within the log________________________________

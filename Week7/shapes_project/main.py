@@ -1,4 +1,5 @@
 from rectangle import Rectangle
+from square import Square
 
 rect = Rectangle(5, 10)
 
@@ -7,7 +8,6 @@ print("Area:", rect.get_area())
 print("Perimeter:", rect.get_perimeter())
 
 
-from square import Square
 
 square = Square(5)
 

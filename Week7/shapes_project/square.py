@@ -5,3 +5,5 @@ class Square(Rectangle):
         super().__init__(s, s)
     def __str__(self):
         return f"Square with all sides being:{self.w}"
+    def __repr__(self):
+        return self.__str__()

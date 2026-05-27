@@ -12,3 +12,5 @@ class Triangle(Shape):
         return self.base + self.side2 + self.side3
     def __str__(self):
         return f"We've got a triangle with sides: {self.base}, {self.side2}, {self.side3} and height: {self.height}"
+    def __repr__(self):
+        return self.__str__()

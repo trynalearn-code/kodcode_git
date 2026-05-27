@@ -9,3 +9,5 @@ class Rectangle(Shape):
         return 2*(self.w+self.h)
     def __str__(self):
         return f"Rectangle(width:{self.w}, height:{self.h})"
+    def __repr__(self):
+        return self.__str__()

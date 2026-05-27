@@ -10,3 +10,5 @@ class Circle(Shape):
         return self.r*2*pi
     def __str__(self):
         return f"Circle with a radius of {self.r}"
+    def __repr__(self):
+        return self.__str__()

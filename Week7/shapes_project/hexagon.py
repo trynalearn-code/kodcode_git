@@ -10,3 +10,5 @@ class Hexagon(Shape):
         return self.side*6
     def __str__(self):
         return f"Hexagon. length of side:{self.side}"
+    def __repr__(self):
+        return self.__str__()

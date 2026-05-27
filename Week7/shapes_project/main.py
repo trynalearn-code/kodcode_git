@@ -3,6 +3,7 @@ from square import Square
 from triangle import Triangle
 from circle import Circle
 from hexagon import Hexagon
+from calculator import num_validation
 rect = Rectangle(5, 10)
 
 rect = Rectangle(5, 10)

@@ -1,0 +1,216 @@
+כיתה: Arava
+
+ת"ז: 347533747
+
+שם התלמיד/ה: Micha'el Shloush
+
+דף תשובות — מבחן
+סה״כ: 100 נקודות
+
+
+שאלה 1  (5 נקודות)
+
+B
+-----------------------------------------------------------
+
+שאלה 2  (5 נקודות)
+
+A
+-----------------------------------------------------------
+
+שאלה 3  (5 נקודות)
+
+A
+-----------------------------------------------------------
+
+שאלה 4  (10 נקודות)
+
+class Student:
+	def __init__(self, name, grade):
+		self.name=name
+		self.grade=grade
+	def introduce(self):
+		return "My name is {self.name) and my grade is {self.grade}"
+s1=Student()
+s2=Student()
+print(s1)
+print(s2)
+
+-----------------------------------------------------------
+
+שאלה 5  (10 נקודות)
+
+
+with open("users.txt", "w", encoding="utf-8") as f:
+	f.write("Dan\nNoa\nAmit\n")
+
+with open("users.txt", "r", encoding="utf-8") as f:
+	for line in f:
+		print(f.readline())
+
+-----------------------------------------------------------
+ 
+שאלה 6  (10 נקודות)
+
+
+class Vehicle:
+	def move():
+		return "Vehicle is moving"
+class Car(Vehicle):
+	def honk():
+		return "Beep Beep"	
+
+c1=Vehicle()
+c2=Car()
+print(c1.move())
+print(c2.honk())
+
+ -----------------------------------------------------------
+
+שאלה 7  (10 נקודות)
+
+
+
+
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(levelname)s | %(message)s"
+)
+
+logger = logging.getLogger(__name__)
+
+# def save_user(username):
+#    logger.info("Saving user: %s", username)
+
+def login(username):
+    logger.info("User %s is trying to login", username)
+    if len(username) < 3:
+        logger.warning("Username too short")
+        return
+    save_user(username)
+    logger.info("User %s logged in successfully", username)
+
+login("Dan")
+-----------------------------------------------------------
+
+שאלה 8  (10 נקודות)
+
+class Animal():
+	def speak():
+		pass
+class Dog(Animal):
+	def speak():
+		return "Woof!"
+class Cat(Animal):
+	def speak():
+		return "Meow"
+
+animals=[Cat(),Dog()]
+for animal in animals:
+	print(animal.speak())
+
+ -----------------------------------------------------------
+
+שאלה 9  (10 נקודות)
+
+class Animal():
+	pass
+class Dog(Animal):
+	pass
+
+
+d=Dog()
+print(type(d)==Animal #False
+print(isinstance(d,Animal) #True
+print(issubclass(d,Animal) #True
+
+type checks if the object is literally the same as the class (False). Is instance can look at the hierarchy and see the relationship (will in this case return True).
+
+
+ -----------------------------------------------------------
+
+שאלה 10  (25 נקודות)
+
+
+#1.
+class Employee(self, name, salary):
+	self.name=name
+	self.salary=salary
+	
+	def work():
+		return "Employee is working"
+
+class Developer(Employee):
+	def __init__(self, name, salary, language):
+		super().__init__(name, salary)
+		self.language=language
+	def work():
+		return f"{self.name} is coding in {self.language}"
+class Designer(Employee):
+	def __init__(self, name, salary):
+		super().__init__(name, salary)
+	def work():
+		return f"{self.name} is designing UI"
+
+#2.
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(levelname)s | %(message)s"
+)
+
+logger = logging.getLogger(__name__)
+
+def save_employee(employee):
+    logger.info("Saving employee: %s", employee)
+
+with open("employees.txt", "w", encoding="utf-8") as f:
+	f.write(save_employee(employee))
+
+
+
+with open("employees.txt", "r", encoding="utf-8") as f:
+	for line in f:
+		print(f.readline())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ -----------------------------------------------------------

@@ -1,4 +1,4 @@
-from shape_manager import ShapeManager
+from shapemanager import ShapeManager
 
 from square import Square
 from rectangle import Rectangle

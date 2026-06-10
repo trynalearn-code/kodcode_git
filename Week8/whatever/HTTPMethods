@@ -1,0 +1,47 @@
+import requests
+# #1.
+# response=requests.get("https://jsonplaceholder.typicode.com/users/1",verify=False)
+# data=response.json()
+# print(f"Name: {data['name']}")
+# print(f"Data: {data['email']}")
+# print(f"City: {data['address']['city']}")
+
+# #1b.
+# response=requests.get("https://jsonplaceholder.typicode.com/posts",verify=False)
+# data=response.json()
+# print(len(data))
+
+# #1c.
+# response=requests.get("https://jsonplaceholder.typicode.com/posts?userId=2",verify=False)
+# data=response.json()
+# for line in data:
+#     print(line["title"])
+
+# #2.
+# def safe_get(url):
+#     response=requests.get(url,verify=False)
+#     if response.status_code==200:
+#         return response.json()
+#     elif response.status_code==404:
+#         return None
+#     else:
+#         raise Exception(f"status:{response.status_code}")
+
+# #3.
+# from fastapi import FastAPI
+
+# app=FastAPI()
+# @app.get("/greet")
+# def greets(name="world"):
+#     return f"Hello {name}"
+
+#4.
+response=requests.get("https://jsonplaceholder.typicode.com/posts",verify=False)
+posts = response.json()
+
+response2=requests.get("https://jsonplaceholder.typicode.com/users",verify=False)
+users = response2.json()
+user_names = {} 
+for user in users:
+    user_names[user["id"]] = user["name"]
+print(user_names)

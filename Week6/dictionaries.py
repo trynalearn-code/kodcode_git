@@ -8,12 +8,14 @@
 
 # #2.
 # def maxes(d):
-#     max=0
+#     max_key = None
+#     max_value = 0
 #     for k in d:
-#         if d[k]>max:
-#             max=d[k]
-#     return max
-# print(maxes( {"a": 3, "b": 7, "c": 5}))
+#         if d[k] > max_value:
+#             max_value = d[k]
+#             max_key = k
+#     return max_key
+# print(maxes({"a": 3, "b": 7, "c": 5}))
 
 # #3.
 # def counts(word):

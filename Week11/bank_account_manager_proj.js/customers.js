@@ -93,7 +93,8 @@ function showStatistics(){
     console.log("Highest balance: " + customers[0])
 }
 
-const c1 = createCustomer("John", "student", 42322);
+const c1 = eCustomer("")("John", "student", 42322);
+const c2 = creat
 
 customers.push(c1)
 

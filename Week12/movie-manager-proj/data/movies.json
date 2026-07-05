@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Inception",
+    "genre": "Sci-Fi",
+    "year": 2010,
+    "rating": 8.8
+  },
+  {
+    "id": 2,
+    "name": "Inception",
+    "genre": "Sci-Fi",
+    "year": 2010,
+    "rating": 8.8
+  },
+  {
+    "id": 3,
+    "name": "Inception",
+    "genre": "Sci-Fi",
+    "year": 2010,
+    "rating": 8.8
+  },
+  {
+    "id": 4,
+    "name": "Inception",
+    "genre": "Sci-Fi",
+    "year": 2010,
+    "rating": 3.5
+  }
+]

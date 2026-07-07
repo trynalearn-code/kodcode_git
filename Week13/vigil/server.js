@@ -1,5 +1,5 @@
 import http from "http"
-import { readHeroes } from "./storage/heroStorage.js"
+import { readHeroes, writeHeroes } from "./storage/heroStorage.js"
 
 const server = http.createServer(async(req, res)=>{
     if (req.url === "/heroes" && req.method === "GET"){
@@ -15,7 +15,7 @@ const server = http.createServer(async(req, res)=>{
         const id = Number(separate[2])
         const heroes = await readHeroes()
         const heroID = heroes.filter(hero=>hero.id === id)
-        if (!heroID){
+        if (!heroes){
             res.statusCode = 404
             res.end(JSON.stringify({
                 success:false,
@@ -28,8 +28,23 @@ const server = http.createServer(async(req, res)=>{
         }))
     }
     else if (req.url.startsWith("/heroes") && req.method==="POST"){
-
-    }
+        let body = "";
+        req.on("data", (chunk)=>{
+            body +=chunk
+        })
+        const heroes = await readHeroes()
+        heroes.push(parsed)
+        await writeHeroes(heroes)
+        
+        req.on("end", async () => {
+            const parsed = JSON.parse(body)
+            res.end(JSON.stringify({
+                success: true,
+                data:parsed
+        }))
+    })
+}
+        
     else{
         res.statusCode=404;
         res.setHeader("Content-Type", "application/json")

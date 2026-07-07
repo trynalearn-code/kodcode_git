@@ -1,6 +1,41 @@
-[{"id": 4, "codeName": "Shadow", "powers":"invisibility", "threatLevel":10, "status": "missing", "origin": "unknown",
- "affiliations": "Darkness.inc", "firstSighting": "2021-03-04", "notes":"he's gone", "createdAt": "2026-07-06T10:00:00Z",
-    "updatedAt": "2026-07-06T10:00:00Z" },
-{"id": 2, "codeName": "Nokia", "powers":"invincible", "threatLevel":1, "status": "retired", "origin": "Stone",
- "affiliations": "OldAgeHome", "firstSighting": "1903-03-04", "notes":"he doesn't really do anything", "createdAt": "1904-07-06T10:00:00Z",
-    "updatedAt": "2026-07-06T10:00:00Z" }]
+[
+    {
+        "id": 4,
+        "codeName": "Shadow",
+        "powers": "invisibility",
+        "threatLevel": 10,
+        "status": "missing",
+        "origin": "unknown",
+        "affiliations": "Darkness.inc",
+        "firstSighting": "2021-03-04",
+        "notes": "he's gone",
+        "createdAt": "2026-07-06T10:00:00Z",
+        "updatedAt": "2026-07-06T10:00:00Z"
+    },
+    {
+        "id": 2,
+        "codeName": "Nokia",
+        "powers": "invincible",
+        "threatLevel": 1,
+        "status": "retired",
+        "origin": "Stone",
+        "affiliations": "OldAgeHome",
+        "firstSighting": "1903-03-04",
+        "notes": "he doesn't really do anything",
+        "createdAt": "1904-07-06T10:00:00Z",
+        "updatedAt": "2026-07-06T10:00:00Z"
+    },
+    {
+        "id": 5,
+        "codeName": "batman",
+        "powers": "cash",
+        "threatLevel": 5,
+        "status": "active",
+        "origin": "unknown",
+        "affiliations": "Costumes",
+        "firstSighting": "2021-03-04",
+        "notes": "he's loaded",
+        "createdAt": "2026-07-07T07:59:03.161Z",
+        "updatedAt": "2026-07-07T07:59:03.162Z"
+    }
+]

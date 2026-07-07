@@ -38,15 +38,16 @@ const server = http.createServer(async(req, res)=>{
         const newHero= {
             id:generateID(heroes),
             ...parsed,
-            createdAt: new Date().getDate(),
-            updatedAt: new Date().getDate()
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString()
         }
         heroes.push(newHero)
         await writeHeroes(heroes)
-        
+        res.setHeader("content-Type", "application/json")
+        res.statusCode=201
             res.end(JSON.stringify({
                 success: true,
-                data:parsed
+                data:newHero
         }))
     })
 }

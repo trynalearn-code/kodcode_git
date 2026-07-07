@@ -1,5 +1,5 @@
 import http from "http"
-import { readHeroes, writeHeroes } from "./storage/heroStorage.js"
+import { generateID, readHeroes, writeHeroes } from "./storage/heroStorage.js"
 
 const server = http.createServer(async(req, res)=>{
     if (req.url === "/heroes" && req.method === "GET"){
@@ -32,12 +32,18 @@ const server = http.createServer(async(req, res)=>{
         req.on("data", (chunk)=>{
             body +=chunk
         })
+        req.on("end", async () => {
+        const parsed = JSON.parse(body)
         const heroes = await readHeroes()
-        heroes.push(parsed)
+        const newHero= {
+            id:generateID(heroes),
+            ...parsed,
+            createdAt: new Date().getDate(),
+            updatedAt: new Date().getDate()
+        }
+        heroes.push(newHero)
         await writeHeroes(heroes)
         
-        req.on("end", async () => {
-            const parsed = JSON.parse(body)
             res.end(JSON.stringify({
                 success: true,
                 data:parsed

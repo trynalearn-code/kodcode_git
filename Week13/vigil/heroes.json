@@ -37,5 +37,20 @@
         "notes": "he's loaded",
         "createdAt": "2026-07-07T07:59:03.161Z",
         "updatedAt": "2026-07-07T07:59:03.162Z"
+    },
+    {
+        "id": 6,
+        "codeName": "batman",
+        "powers": [
+            "cash"
+        ],
+        "threatLevel": 5,
+        "status": "active",
+        "origin": "unknown",
+        "affiliations": "Costumes",
+        "firstSighting": "2021-03-04",
+        "notes": "he's loaded",
+        "createdAt": "2026-07-07T08:49:37.129Z",
+        "updatedAt": "2026-07-07T08:49:37.129Z"
     }
 ]

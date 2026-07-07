@@ -1,5 +1,6 @@
 import http from "http"
 import { generateID, readHeroes, writeHeroes } from "./storage/heroStorage.js"
+import { validator } from "./validator.js"
 
 const server = http.createServer(async(req, res)=>{
     if (req.url === "/heroes" && req.method === "GET"){
@@ -34,10 +35,19 @@ const server = http.createServer(async(req, res)=>{
         })
         req.on("end", async () => {
         const parsed = JSON.parse(body)
+        const check = validator(parsed)
+        if (check !=true) {
+            res.statusCode = 400
+            return res.end(JSON.stringify({
+                success:false,
+                message:check
+            }))
+        }
         const heroes = await readHeroes()
         const newHero= {
             id:generateID(heroes),
             ...parsed,
+            status:parsed.status || "active",
             createdAt: new Date().toISOString(),
             updatedAt: new Date().toISOString()
         }

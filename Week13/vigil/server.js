@@ -44,6 +44,14 @@ const server = http.createServer(async(req, res)=>{
             }))
         }
         const heroes = await readHeroes()
+        const existing = heroes.find(hero=>hero.codeName ===parsed.codeName)
+        if (existing){
+            res.statusCode = 409
+            return res.end(JSON.stringify({
+                success:false,
+                message:"Hero already in system"
+            }))
+        }
         const newHero= {
             id:generateID(heroes),
             ...parsed,

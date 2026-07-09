@@ -1,8 +1,32 @@
 [
     {
-        "id":4,
+        "id":1,
         "name": "Harry Potter",
         "price": "24",
         "stock": 2
+    },
+    {
+        "id":2,
+        "name": "LOTR",
+        "price": "25",
+        "stock": 193
+    }
+    {
+        "id":3,
+        "name": "Firefly",
+        "price": "14",
+        "stock": 0
+    }
+    {
+        "id":4,
+        "name": "The Wolf",
+        "price": "63",
+        "stock": 1
+    }
+    {
+        "id":5,
+        "name": "Atomic Habits",
+        "price": "19",
+        "stock": 12
     }
 ]

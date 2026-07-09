@@ -10,19 +10,19 @@
         "name": "LOTR",
         "price": "25",
         "stock": 193
-    }
+    },
     {
         "id":3,
         "name": "Firefly",
         "price": "14",
         "stock": 0
-    }
+    },
     {
         "id":4,
         "name": "The Wolf",
         "price": "63",
         "stock": 1
-    }
+    },
     {
         "id":5,
         "name": "Atomic Habits",

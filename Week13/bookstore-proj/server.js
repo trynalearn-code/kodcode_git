@@ -1,5 +1,6 @@
 import express from "express"
 import fs from "fs/promises"
+import "dotenv/config"
 
 const app = express()
 
@@ -17,8 +18,17 @@ app.get("/", (req, res)=>{
 app.get("/health", (req,res)=>{
     return res.json({
         success:true,
-        data:{status: "healthy"}
+        data:{status: "healthy connection"}
     })
 })
 
-app.listen(3000, ()=>{console.log("Server is listening on port 3000")})
+async function readJson(jsonFile) {
+    const data = await fs.readFile(jsonFile, "utf-8")
+    return JSON.parse(data)
+}
+
+async function writeJson(jsonFile, content) {
+    await fs.writeFile(jsonFile, JSON.stringify(content))
+}
+
+app.listen(process.env.PORT, ()=>{console.log(`Server is listening on port ${process.env.PORT}`)})

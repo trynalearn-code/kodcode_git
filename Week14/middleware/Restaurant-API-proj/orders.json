@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Yonatan"
+  },
+  {
+    "id": 1783865102485,
+    "customer": "David",
+    "table": 5,
+    "items": [
+      "Pizza",
+      "Cola"
+    ]
+  },
+  {
+    "id": 1783866139047,
+    "customer": "George",
+    "table": 7,
+    "items": "yup"
+  }
+]

@@ -17,11 +17,13 @@
 //   res.json({ received: req.body });
 // });
 
-//8.
-function auth(req, res, next) {
-  const token = req.header("Authorization");
-  if (!token) {
-    return res.status(401).json({ message: `You aren't authorized` });
-  }
-next();
-}
+// //8.
+// function auth(req, res, next) {
+//   const token = req.header("Authorization");
+//   if (!token) {
+//     return res.status(401).json({ message: `You aren't authorized` });
+//   }
+// next();
+// }
+
+//9.

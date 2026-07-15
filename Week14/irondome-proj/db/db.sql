@@ -1,0 +1,28 @@
+USE iron_dome;
+
+CREATE TABLE IF NOT EXISTS operators(
+id INT AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(100) NOT NULL,
+`rank` VARCHAR(100)
+);
+
+CREATE TABLE IF NOT EXISTS incidents(
+id INT AUTO_INCREMENT PRIMARY KEY,
+code_name VARCHAR(100) NOT NULL,
+threat_level VARCHAR(50),
+status VARCHAR(50) NOT NULL,
+operator_id INT NOT NULL,
+FOREIGN KEY (operator_id) REFERENCES operators(id),
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS logs(
+id INT AUTO_INCREMENT PRIMARY KEY,
+action VARCHAR(100) NOT NULL,
+incident_id INT NOT NULL,
+FOREIGN KEY (incident_id) REFERENCES incidents(id),
+operator_id INT NOT NULL,
+FOREIGN KEY (operator_id) REFERENCES operators(id),
+description TEXT,
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

@@ -26,7 +26,7 @@ router.get("/scores", async (req, res)=>{
         const allScores = await scores.find().toArray()
         res.status(200).json({
             success:true,
-            message:allScores
+            data:allScores
         })
     } catch (error) {
         return res.status(500).json({

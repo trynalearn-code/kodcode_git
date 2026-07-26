@@ -60,3 +60,15 @@ describe("validatePrice", ()=>{
         })
     })
 })
+
+describe("formatPrice", ()=>{
+    it("format decimal price", ()=>{
+        assert.strictEqual(formatPrice(49.9), `₪49.90`)
+    })
+    it("format whole price", ()=>{
+        assert.strictEqual(formatPrice(100), `₪100.00`)
+    })
+    it("format zero price", ()=>{
+        assert.strictEqual(formatPrice(0), `₪0.00`)
+    })
+})

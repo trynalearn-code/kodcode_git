@@ -21,8 +21,8 @@ export function validatePrice(price){
     if (typeof(price) !== "number"){
         throw new Error("price must be a number")
     }
-    
+
 }
 export function formatPrice(amount){
-
+    return `₪${amount.toFixed(2)}`
 }

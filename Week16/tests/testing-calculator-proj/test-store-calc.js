@@ -25,3 +25,15 @@ describe("applyTax", ()=>{
         assert.strictEqual(applyTax(0, .17), 0)
     })
 })
+
+describe("calculateCartTotal", ()=>{
+    it("calculates the cart total", ()=>{
+        assert.strictEqual(calculateCartTotal([{ price: 4, quantity: 5 }, { price: 3, quantity: 1 }]), 23)
+    })
+    it("returns 0 for the empty cart", ()=>{
+        assert.strictEqual(calculateCartTotal([]), 0)
+    })
+    it("calculates one item in the cart", ()=>{
+        assert.strictEqual(calculateCartTotal([{ price: 3, quantity: 1 }]), 3)
+    })
+})

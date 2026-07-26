@@ -3,7 +3,7 @@ export function calculateDiscount(price, percent){
     return price-(price*(percent/100))
 }
 export function applyTax(price, taxRate){
-    return price * taxRate
+    return price + price * taxRate
 }
 export function calculateCartTotal(items){
 

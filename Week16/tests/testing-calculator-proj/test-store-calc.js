@@ -18,10 +18,10 @@ describe("applyTax", ()=>{
     it("applies normal tax rate", ()=>{
         assert.strictEqual(applyTax(100, .17), 117)
     })
-    it("applies normal tax rate", ()=>{
-        assert.strictEqual(applyTax(100, .17), 117)
+    it("applies duty free", ()=>{
+        assert.strictEqual(applyTax(100, 0), 100)
     })
-    it("applies normal tax rate", ()=>{
-        assert.strictEqual(applyTax(100, .17), 117)
+    it("applies no tax to a free item", ()=>{
+        assert.strictEqual(applyTax(0, .17), 0)
     })
 })

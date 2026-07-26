@@ -37,3 +37,26 @@ describe("calculateCartTotal", ()=>{
         assert.strictEqual(calculateCartTotal([{ price: 3, quantity: 1 }]), 3)
     })
 })
+
+describe("validatePrice", ()=>{
+    it("validates regular price", ()=>{
+        assert.doesNotThrow(()=>{
+            validatePrice(100)
+        })
+    })
+    it("allows 0", ()=>{
+        assert.doesNotThrow(()=>{
+            validatePrice(0)
+        })
+    })
+    it("throws an error for a negative price", ()=>{
+        assert.throws(()=>{
+            validatePrice(-100)
+        })
+    })
+    it("must be a number", ()=>{
+        assert.throws(()=>{
+            validatePrice("hey")
+        })
+    })
+})

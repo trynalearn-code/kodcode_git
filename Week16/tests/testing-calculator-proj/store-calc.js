@@ -1,3 +1,4 @@
+import { error } from "node:console"
 import { totalmem } from "node:os"
 
 export function calculateDiscount(price, percent){
@@ -14,7 +15,13 @@ export function calculateCartTotal(items){
     return total
 }
 export function validatePrice(price){
-
+    if (price < 0){
+        throw new Error("price must be positive")
+    }
+    if (typeof(price) !== "number"){
+        throw new Error("price must be a number")
+    }
+    
 }
 export function formatPrice(amount){
 

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="box.css">
+    <title>Document</title>
+</head>
+<body>
+      
+   <head>
+  <meta charset="UTF-8">
+  <title>Display Property Example</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 40px;
+      border: 2px solid black;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 40px;
+      margin: 5px;
+    }
+
+    /* Step 1: Default (inline) */
+    .inline {
+        /* No display property */
+    }
+
+    /* Step 2: inline-block */
+    .inline-block {
+      display: inline-block;
+    }
+
+    /* Step 3: block */
+    .block {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Step 1: Default (inline)</h2>
+  <span class="box inline">1</span>
+  <span class="box inline">2</span>
+  <span class="box inline">3</span>
+
+  <h2>Step 2: inline-block</h2>
+  <span class="box inline-block">1</span>
+  <span class="box inline-block">2</span>
+  <span class="box inline-block">3</span>
+
+  <h2>Step 3: One element is block</h2>
+  <span class="box inline-block">1</span>
+  <span class="box block">2</span>
+  <span class="box inline-block">3</span>
+
+</body>
+</body>
+</html>

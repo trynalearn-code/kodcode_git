@@ -1,0 +1,16 @@
+p, a {
+    color:aqua
+}
+
+.highlight {
+    background: firebrick;
+}
+
+#title {
+    font-size: 400px;
+}
+
+button {
+    padding: 1px;
+}
+

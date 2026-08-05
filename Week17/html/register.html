@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <title>Document</title>
+</head>
+<body>
+<form action="http://localhost:3000/register" method="post">
+    <label for="fullname">Full Name
+        <input type="text" name="fullname" id="fullname" required>
+    </label>
+
+    <label for="email">Email
+        <input type="email" name="email" id="email" required>
+    </label>
+
+    <label for="password">Password
+        <input type="password" name="password" id="password" required minlength="8">
+    </label>
+
+    <label for="age">Age
+        <input type="number" name="age" id="age" min="13" max="120">
+    </label>
+
+    <label for="role">Role
+        <select name="role" id="role">
+            <option value="admin">Admin</option>
+            <option value="user">User</option>
+        </select>
+    </label>
+
+    <label for="conditions">Terms and conditions
+        <input type="checkbox" name="conditions" id="conditions" required>
+    </label>
+
+    <button type="submit">Register</button>
+</form>
+    
+</body>
+</html>

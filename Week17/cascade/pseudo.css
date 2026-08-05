@@ -1,0 +1,20 @@
+/* Empty list */
+.comments:empty {
+    display: block;
+    padding: 20px;
+    border: 2px dashed #ccc;
+    text-align: center;
+}
+
+/* Message shown only when the list is empty */
+.comments:empty::before {
+    content: "No comments yet";
+    color: gray;
+    font-style: italic;
+}
+
+/* List with comments */
+.comments {
+    list-style: disc;
+    padding-left: 25px;
+}

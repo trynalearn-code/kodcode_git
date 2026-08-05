@@ -1,0 +1,15 @@
+p {
+    color: blue;
+}
+
+.Fun {
+    color: chocolate;
+}
+
+#funny {
+    color: red;
+}
+
+p.Fun{
+    color: fuchsia;
+}

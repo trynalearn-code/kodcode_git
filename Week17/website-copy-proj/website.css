@@ -1,0 +1,52 @@
+.site-header {
+    color: #18241f;
+    font-family: Georgia, serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkgray;
+}
+
+.navigation {
+    display: flex;
+    gap: 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 63vw;
+    color: seashell;
+    background-color: rgb(4, 10, 10);
+    font-size: 40px;
+    padding: 10px;
+}
+
+.titles {
+    font-family: fantasy;
+}
+
+.legends {
+  font-family: "Skranji", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.coolness {
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+}
+.hero{
+    display: flex;
+    height: 100vh;
+}
+.asian{
+    height: 100vh;
+}
+
+.buttns{
+    display: flex;   
+    justify-content: space-evenly;
+    
+}

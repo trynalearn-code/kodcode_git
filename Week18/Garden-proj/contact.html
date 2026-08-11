@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Contacts</title>
+    </head>
+    <body>
+        <nav>
+            <img class="logo" src="https://scontent.fsdv4-1.fna.fbcdn.net/v/t39.30808-1/305429308_408116804767043_7788283229457313262_n.jpg?stp=dst-jpg_tt6&cstp=mx366x366&ctp=s200x200&_nc_cat=105&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=FA1Kr7PHVvwQ7kNvwHCc6v7&_nc_oc=Adr4NxjBD24yXASAGXHuufc1oMDnRsaUwEQVpZlzA9o_jDwcA32lRNfBXmKjP_49z94VwejRUYIP6L--X5rJ-xP-&_nc_zt=24&_nc_ht=scontent.fsdv4-1.fna&_nc_gid=c6-a0mew_8TgE8rzwwx3Tg&_nc_ss=70289&oh=00_AQECvqYGA-Em3W6HxwCpBpANfhf8WDCwldNSwuyIJcGzww&oe=6A7F832B" alt="logo">
+            <div class="link">
+                <a href="index.html">Home</a>
+                <a class="active" href="contact.html">Contact</a>
+            </div>
+        </nav>
+        
+        <main>
+    <h1 class="title">Contact Us</h1>
+
+    <section class="info">
+        <div class="store">
+            <p class="item">Address</p><strong class="detail">23 Al Hapanim Street</strong>
+        </div>
+        <div class="store">
+            <p class="item">Hours</p><strong class="detail">9:00-5:00</strong>
+        </div>
+        <div class="store">
+            <p class="item">Friday</p><strong class="detail">9:00-2:00</strong>
+        </div>
+        <div class="store">
+            <p class="item">Phone</p><strong class="detail">052-FLOWERS</strong>
+        </div>
+    </section>
+
+        <h2 class="recommended">Leave your details. We'll get back to you</h2>
+        <p>Unsure which plan is good for you? Send us your deatails with any questions. We'll give you our personalized service.</p>
+            <form class="inputs">
+                <div> 
+                    <label for="name">Full Name</label>
+                    <input type="text" placeholder="Example: Micha'el Gardener" name="name" id="name" class="input" required>
+                </div> 
+                <div>
+                    <label for="subject">How can we help?</label>
+                    <select name="subject" id="subject" required>
+                        <option value="">Choose a suject</option>
+                        <option value="plant">Help choosing a plant</option>
+                        <option value="loc">Help finding us</option>
+                        <option value="order">Help about an order</option>
+                        <option value="other">Something else</option>
+                    </select>
+                    
+                </div> 
+                <div>
+                    <label for="email">email</label>
+                    <input type="email" placeholder="you@example.com" name="email" id="email" class="input" required>
+                </div>
+                <div>
+                    <label for="about">Tell us all about it!</label>
+                    <textarea name="about" placeholder="For example: I just wanted to thank you for the most exquisite flowers I've ever seen! She was so impressed she said yes before I even proposed!" id="about" class="input" required></textarea>
+                </div>
+                <button class="btn">Send</button>
+            </form>
+    </main>
+
+</body>
+</html>

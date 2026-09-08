@@ -7,6 +7,8 @@ interface ProductDetailsProps{
 function ProductDetails({product}:ProductDetailsProps) {
   return (
     <>
+    <div className="bg-white text-black dark:bg-gray-800 dark:text-white p-6">
+
     <img src={product.image} alt={product.title}/>
 
     <h1>{product.title}</h1>
@@ -16,6 +18,7 @@ function ProductDetails({product}:ProductDetailsProps) {
     <p>{product.description}</p>
 
     <p>{product.category}</p>
+    </div>
     </>
   )
 }

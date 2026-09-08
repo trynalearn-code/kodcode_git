@@ -5,13 +5,13 @@ import Footer from "./components/Footer"
 function Layout() {
   return (
     <>
-    <Header/>
-    
-    <main>
-        <Outlet/>
-    </main>
+      <Header />
 
-    <Footer/>
+      <main className="min-h-screen bg-white text-black dark:bg-gray-900 dark:text-white">
+        <Outlet />
+      </main>
+
+      <Footer />
     </>
 
   )

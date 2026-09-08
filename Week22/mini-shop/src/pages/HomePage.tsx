@@ -1,9 +1,8 @@
-import { useContext, useState } from "react"
+import { useState } from "react"
 import SearchBar from "../components/SearchBar"
 import useFetch from "../hooks/useFetch"
 import type { Product } from "../types/product"
 import ProductCard from "../components/ProductCard"
-import ThemeContext from "../context/ThemeContext"
 
 function HomePage() {
   const { data, loading, error } = useFetch<Product[]>("https://fakestoreapi.com/products")
@@ -13,20 +12,15 @@ function HomePage() {
   const filtered = data?.filter((product) =>
     product.title.toLowerCase().includes(search.toLowerCase()))
 
-  const context = useContext(ThemeContext)
-  if (!context) {
-    throw new Error("App must be used inside ThemeProvider")
-  }
-  const { theme } = context
 
   return (
     <>
-      <div className={theme === "dark" ? "dark bg-gray-900 text-white" : "bg-white text-black"}>
-        <SearchBar search={search} setSearch={setSearch} />
-        <div>
-          {filtered?.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+      <div className="bg-white text-black dark:bg-gray-900 dark:text-white">        <SearchBar search={search} setSearch={setSearch} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6">          {filtered?.length === 0 ? (
+          <p>No products found.</p>
+        ) : (filtered?.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        )))}
         </div>
       </div>
     </>

@@ -11,20 +11,24 @@ function ProductCard({ product }: ProductCardProps) {
     const favorite = isFavorite(product.id)
     return (
         <>
-        <div className="bg-white text-black dark:bg-gray-800 dark:text-white p-4"> 
-            <Link to={`/products/${product.id}`}>
-                <img src={product.image} alt={product.title} />
-
-                <h2>{product.title}</h2>
+            <div className="bg-white text-black dark:bg-gray-800 dark:text-white p-4 rounded-lg shadow">            <Link to={`/products/${product.id}`}>
+                <img
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-48 object-contain"
+                />
+                <h2 className="font-bold mt-2">
+                    {product.title}
+                </h2>
                 <p>${product.price}</p>
-                </Link>
-                <button   className="bg-blue-500 text-white p-2" onClick={() => {
+            </Link>
+                <button className="bg-blue-500 text-white p-2 mt-4" onClick={() => {
                     if (favorite) removeFavorite(product.id)
                     else {
-                addFavorite(product)
-            }
+                        addFavorite(product)
+                    }
                 }}>
-                    {favorite ? "Remove from favorites": "Add to favorites"}
+                    {favorite ? "Remove from favorites" : "Add to favorites"}
                 </button>
             </div>
         </>

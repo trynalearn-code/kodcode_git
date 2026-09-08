@@ -6,15 +6,23 @@ interface FavoritesStore {
     addFavorite: (product: Product) => void,
     removeFavorite: (productId: number) => void,
     isFavorite: (productId: number) => boolean,
-    count:()=>number
+    count: () => number
 }
 
 const useFavoritesStore = create<FavoritesStore>((set, get) => ({
     favorites: [],
     addFavorite: (product) => {
-        set((state) => ({
-            favorites: [...state.favorites, product]
-        }))
+        set((state) => {
+            const alreadyFavorite = state.favorites.some(
+                (favorite) => favorite.id === product.id
+            )
+            if (alreadyFavorite) {
+                return state
+            }
+            return {
+                favorites: [...state.favorites, product]
+            }
+        })
     },
     removeFavorite: (productId) => {
         set((state) => ({
@@ -27,7 +35,7 @@ const useFavoritesStore = create<FavoritesStore>((set, get) => ({
         return get()
             .favorites.some((product) => product.id === productId)
     },
-    count:()=>{
+    count: () => {
         return get().favorites.length
     }
 })

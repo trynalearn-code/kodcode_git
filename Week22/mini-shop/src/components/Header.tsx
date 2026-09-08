@@ -6,15 +6,15 @@ function Header() {
   const favorites = useFavoritesStore((state) => state.favorites)
   return (
     <>
-      <header className="bg-white text-black dark:bg-gray-800 dark:text-white p-4">
-        <h1>Mini Market</h1>
-        <nav>
-        <Link to={"/"}>Home</Link>
-        <Link to="/favorites"
-          className="text-blue-500 dark:text-blue-300">Favorites
-          <span>{favorites.length}</span>
-        </Link>
-          </nav>
+      <header className="bg-white text-black dark:bg-gray-800 dark:text-white p-4 flex justify-between items-center">        <h1>Mini Market</h1>
+        <nav className="flex gap-4 items-center">        <Link to={"/"}>Home</Link>
+          <Link to="/favorites">
+            Favorites
+            <span className="ml-2 bg-blue-500 text-white rounded-full px-2 py-1 text-sm">
+              {favorites.length}
+            </span>
+          </Link>
+        </nav>
         <ThemeToggle />
       </header>
     </>
